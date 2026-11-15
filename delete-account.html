@@ -69,6 +69,7 @@
   .card p + p{margin-top:10px}
   .card a{color:var(--belly);text-decoration:none;font-weight:500}
   .card a:hover{text-decoration:underline}
+  .card p b{font-weight:600}
 
   .steps-list{list-style:none;margin-top:22px;display:grid;gap:16px;max-width:640px}
   .steps-list li{display:flex;gap:14px;align-items:flex-start}
@@ -86,6 +87,7 @@
     max-width:640px;margin-top:32px;font-size:.85rem;color:var(--ink-dim);
     border-left:2px solid var(--stroke);padding-left:18px;
   }
+  .note a{color:var(--belly)}
 
   footer{border-top:1px solid var(--stroke);padding:36px 0;font-size:.78rem;color:var(--ink-dim)}
   footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
@@ -136,27 +138,32 @@
   <div class="content">
     <div class="eyebrow">Account &amp; data</div>
     <h1>Delete your account</h1>
-    <p class="lead">You can request deletion of your MyTunnelPal account and the personal data attached to it at any time, whether or not you still have the app installed.</p>
+    <p class="lead">You can delete your MyTunnelPal account and the personal data attached to it at any time, whether or not you still have the app.</p>
 
     <div class="card">
-      <h2>How to request deletion</h2>
+      <h2>The quickest way: in the app</h2>
+      <p>Open MyTunnelPal, go to <b>Profile</b>, then <b>Delete account</b>. Your account is deleted straight away.</p>
+    </div>
+
+    <div class="card">
+      <h2>No app, or can't sign in? Email us</h2>
       <ul class="steps-list">
         <li>
           <span class="num">1</span>
-          <span class="txt"><b>Email <a href="mailto:support@mytunnelpal.com?subject=Delete%20my%20account">support@mytunnelpal.com</a></b><span>Send your request from the email address on your account, or include your MyTunnelPal username so we can find the right account.</span></span>
+          <span class="txt"><b>Email <a href="mailto:support@mytunnelpal.com?subject=Delete%20my%20account">support@mytunnelpal.com</a></b><span>Send your request from the email address on your MyTunnelPal account. If you write from a different address, or only give your username, we'll ask you to confirm from the email address on your account.</span></span>
         </li>
         <li>
           <span class="num">2</span>
-          <span class="txt"><b>We confirm it's you</b><span>We may reply to verify the request before acting on it.</span></span>
+          <span class="txt"><b>We confirm it's you</b><span>We only delete an account when the request comes from, or is confirmed through, the email address on that account. This stops anyone else from deleting your account.</span></span>
         </li>
         <li>
           <span class="num">3</span>
-          <span class="txt"><b>Your account is restricted, then deleted</b><span>Your account is restricted straight away, and your active personal data is deleted from our systems within 30 days.</span></span>
+          <span class="txt"><b>We delete your account</b><span>Once your request is confirmed, we delete your account within 30 days, usually much sooner, and let you know when it's done.</span></span>
         </li>
       </ul>
     </div>
 
-    <p class="note">Backup copies are deleted through our normal backup cycle shortly afterwards, and are never used as active account data in the meantime. A small number of records may be kept for longer where we have a lawful reason to retain them (for example, records we need to demonstrate compliance) — this is explained in full in our Privacy Policy.</p>
+    <p class="note">Backup copies expire automatically within 35 days and are never used as active account data. A small number of records may be kept for longer where we have a lawful reason, such as records that show we followed the law. Our <a href="https://mytunnelpal.com/privacy">Privacy Policy</a> explains this in full.</p>
   </div>
 </main>
 
