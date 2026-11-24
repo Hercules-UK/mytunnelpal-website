@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyTunnelPal Privacy Policy</title>
+<meta name="description" content="How MyTunnelPal collects, uses and protects your personal data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#060A18;
+    --space-1:#0B1226;
+    --ink:#EAF0FF;
+    --ink-dim:#8B96B8;
+    --belly:#20D6FF;
+    --back:#A76BFF;
+    --hd:#FF5FA8;
+    --gold:#FFD700;
+    --green:#20FFAA;
+    --card:rgba(17,26,54,.72);
+    --stroke:rgba(139,150,184,.18);
+    --max:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    background:var(--space-0);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--belly);color:var(--space-0)}
+  h1,h2,h3{font-family:'Unbounded',sans-serif;line-height:1.15;font-weight:600}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--belly);font-weight:500;margin-bottom:14px;
+  }
+
+  /* ---------- star field ---------- */
+  .stars{position:fixed;inset:0;z-index:-2;background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, rgba(167,107,255,.14), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 110%, rgba(32,214,255,.10), transparent 60%),
+    var(--space-0);}
+  .stars svg{width:100%;height:100%}
+
+  /* ---------- header ---------- */
+  header.top{padding:26px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+  .logo svg{width:26px;height:26px}
+  .back-link{font-size:.85rem;color:var(--ink-dim);text-decoration:none}
+  .back-link:hover{color:var(--belly)}
+
+  /* ---------- content ---------- */
+  main{padding:56px 0 96px}
+  .content h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:18px}
+  .content p.lead{font-size:1.05rem;color:var(--ink-dim);max-width:38em;font-weight:300;margin-bottom:40px}
+
+  .card{
+    background:var(--card);border:1px solid var(--stroke);border-radius:22px;
+    padding:30px 32px;margin-bottom:24px;max-width:640px;
+  }
+  .card h2{font-size:1.05rem;margin-bottom:12px}
+  .card p{color:var(--ink-dim);font-weight:300;font-size:.95rem}
+  .card p + p{margin-top:10px}
+  .card a{color:var(--belly);text-decoration:none;font-weight:500}
+  .card a:hover{text-decoration:underline}
+  .card p b{font-weight:600}
+
+  .steps-list{list-style:none;margin-top:22px;display:grid;gap:16px;max-width:640px}
+  .steps-list li{display:flex;gap:14px;align-items:flex-start}
+  .steps-list .num{
+    flex:0 0 28px;height:28px;border-radius:50%;background:rgba(32,214,255,.14);
+    border:1px solid var(--belly);color:var(--belly);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Unbounded',sans-serif;font-size:.8rem;font-weight:600;
+  }
+  .steps-list .txt{color:var(--ink);font-size:.95rem;padding-top:2px}
+  .steps-list .txt b{display:block;margin-bottom:2px}
+  .steps-list .txt span{color:var(--ink-dim);font-weight:300}
+
+  .note{
+    max-width:640px;margin-top:32px;font-size:.85rem;color:var(--ink-dim);
+    border-left:2px solid var(--stroke);padding-left:18px;
+  }
+  .note a{color:var(--belly)}
+
+  footer{border-top:1px solid var(--stroke);padding:36px 0;font-size:.78rem;color:var(--ink-dim)}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer .legal{max-width:56em;font-size:.72rem;line-height:1.5}
+
+  @media(max-width:880px){
+    .top .wrap{justify-content:center}
+  }
+
+  /* ---------- legal document ---------- */
+  .doc{max-width:760px}
+  .doc h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:18px}
+  .doc h2{font-size:1.35rem;margin:48px 0 14px}
+  .doc h3{font-size:1.05rem;margin:32px 0 10px}
+  .doc h4{font-family:'Unbounded',sans-serif;font-size:.95rem;font-weight:600;margin:24px 0 8px}
+  .doc p,.doc li{color:var(--ink-dim);font-weight:300;font-size:.98rem}
+  .doc p{margin-bottom:14px}
+  .doc strong{color:var(--ink);font-weight:600}
+  .doc ul,.doc ol{margin:0 0 16px 1.4em}
+  .doc li{margin-bottom:6px}
+  .doc a{color:var(--belly);text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+  .doc a:hover{text-decoration:underline}
+  .doc hr{border:0;border-top:1px solid var(--stroke);margin:40px 0}
+  .doc blockquote{border-left:2px solid var(--stroke);padding-left:18px;margin:0 0 16px}
+  .doc .table-scroll{overflow-x:auto;margin:0 0 16px}
+  .doc table{border-collapse:collapse;width:100%;font-size:.9rem}
+  .doc th,.doc td{border:1px solid var(--stroke);padding:10px 12px;text-align:left;vertical-align:top}
+  .doc th{font-family:'Unbounded',sans-serif;font-weight:600;font-size:.8rem;color:var(--ink)}
+  .doc td{color:var(--ink-dim);font-weight:300}
+</style>
+</head>
+<body>
+
+<!-- ambient star field -->
+<div class="stars" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g fill="#EAF0FF">
+      <circle cx="120" cy="140" r="1.4"/><circle cx="340" cy="80"  r="1"/>
+      <circle cx="560" cy="210" r="1.6"/><circle cx="820" cy="60"  r="1.1"/>
+      <circle cx="1080" cy="170" r="1.4"/><circle cx="1300" cy="90" r="1"/>
+      <circle cx="200" cy="420" r="1"/><circle cx="480" cy="520" r="1.5"/>
+      <circle cx="760" cy="380" r="1"/><circle cx="1020" cy="500" r="1.3"/>
+      <circle cx="1260" cy="430" r="1.6"/><circle cx="90"  cy="700" r="1.2"/>
+      <circle cx="420" cy="780" r="1"/><circle cx="700" cy="690" r="1.4"/>
+      <circle cx="980" cy="800" r="1"/><circle cx="1240" cy="720" r="1.5"/>
+      <circle cx="1400" cy="300" r="1.1"/><circle cx="40" cy="300" r="1"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <circle cx="6" cy="20" r="3" fill="#20D6FF"/>
+        <circle cx="13" cy="7" r="2.4" fill="#A76BFF"/>
+        <circle cx="21" cy="16" r="2" fill="#FF5FA8"/>
+        <path d="M6 20 L13 7 L21 16" stroke="rgba(234,240,255,.5)" stroke-width="1"/>
+      </svg>
+      MyTunnelPal
+    </a>
+    <a class="back-link" href="/">&larr; Back to home</a>
+  </div>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<!-- Generated with marked@14.1.4 from docs/legal/privacy-policy.md in Hercules-UK/MyTunnelPal (commit a11ee5f). Do not edit the wording here: change the markdown and regenerate. -->
+<main class="wrap">
+  <article class="doc">
+<h1>MyTunnelPal Privacy Policy</h1>
+<p><strong>Version 1.0, effective 24 November 2026</strong></p>
+<p>MyTunnelPal is a free app for indoor skydivers. You log your flights, track your skill progression, and find tunnels around the world. This policy explains what personal data we collect, why we use it, who it reaches, and what control you have over it.</p>
+<p>We have written it to be read, not scrolled past. If anything is unclear, email us and we will explain it properly.</p>
+<hr>
+<h2>The short version</h2>
+<ul>
+<li>We collect what we need to run the app: your account details, profile, the flights and skills you log, your tunnel preferences, and limited technical information needed to keep the app working.</li>
+<li>MyTunnelPal does not use your device&#39;s location. You find tunnels by moving the map or searching, and we do not build a history of where you have been.</li>
+<li>We do not sell your personal data. That is not our business model.</li>
+<li>Tunnel operators can only send you marketing if you specifically opted in for that tunnel. Favouriting a tunnel does not count as marketing consent.</li>
+<li>Operators do not receive your name, email address, location history or a list of individual flyers. MyTunnelPal delivers their messages.</li>
+<li>Users under 18 do not receive tunnel marketing and start with high-privacy settings.</li>
+<li>You can withdraw marketing consent or delete your account whenever you like.</li>
+</ul>
+<p>The rest of this policy is the detail behind those points.</p>
+<hr>
+<h2>1. Who we are</h2>
+<p>MyTunnelPal is operated by <strong>80s Kiddo Ltd</strong>, a company registered in the United Kingdom.</p>
+<p>In data protection language, 80s Kiddo Ltd is the <strong>data controller</strong> for the personal data we decide how and why to use. That means we are responsible for the way MyTunnelPal handles your data.</p>
+<p>If you have any questions about your personal data or want to exercise one of your rights, contact us at <strong><a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a></strong>.</p>
+<hr>
+<h2>2. What we collect</h2>
+<h3>Account details</h3>
+<p>If you create an account using email, we collect your email address and the authentication information needed to secure your account.</p>
+<p>If you sign in with Google or Apple, we receive the identifier and any account information made available to us through that sign-in process. We do not receive your Google or Apple password.</p>
+<p>When you create an account, we record which version of our Terms of Service applied, when you agreed, and how you signed up (email, Google or Apple). If we make an important change to the Terms, we also record when you agree to the new version. We delete these records when you delete your account.</p>
+<p>Your account details come either directly from you or, where you choose social sign-in, from Google or Apple.</p>
+<h3>Profile</h3>
+<p>We collect:</p>
+<ul>
+<li>your date of birth, which is required so we can apply the age protections described in section 5;</li>
+<li>your username, which is required;</li>
+<li>a profile photo, if you choose to add one;</li>
+<li>your city, if you choose to add one; and</li>
+<li>your gender, if you choose to provide it.</li>
+</ul>
+<h3>What other users can see</h3>
+<p>We want to be precise here, because &quot;profile&quot; covers both things other flyers can see and things they never can.</p>
+<p>For adult accounts, other users may see your <strong>username, display name, profile photo, country, home tunnel, total flight time, skill level, and when you joined</strong>.</p>
+<p>Other users can <strong>never</strong> see your email address, date of birth, city, gender, individual flight sessions, or session notes. These stay between you and MyTunnelPal.</p>
+<p>For users aged 13 to 17, the profile is <strong>not visible to other users</strong>. It becomes visible in the same way as an adult&#39;s from the day after their 18th birthday (see section 5).</p>
+<h3>Flight sessions</h3>
+<p>The flights you log yourself, including things such as the date, duration, tunnel and any notes you add.</p>
+<p>This information is self-reported by you.</p>
+<h3>Skill progression</h3>
+<p>Which skills on the constellation map you have marked as complete.</p>
+<p>This is your own personal record. It is not a certification, and MyTunnelPal does not independently verify that you can perform a skill.</p>
+<h3>Tunnel preferences</h3>
+<p>We may store things such as your home tunnel, tunnels you have favourited, and which tunnels you have chosen to hear from.</p>
+<p>Favouriting a tunnel and agreeing to receive marketing from it are separate things. One does not automatically cause the other.</p>
+<h3>Location</h3>
+<p>MyTunnelPal does not ask for, or have access to, your device&#39;s location. You find tunnels by moving the map or searching.</p>
+<p>Our map is provided by Mapbox. To show the map, your phone sends Mapbox requests that include your IP address, basic device and app information, and the area of the map you are looking at. When you open a tunnel&#39;s page, the small map shows that tunnel&#39;s location, not yours.</p>
+<p>Mapbox&#39;s map software may also send Mapbox information about how the map is loaded and used. Because MyTunnelPal has no access to your location, this cannot include your device&#39;s location. MyTunnelPal does not receive any of this information back from Mapbox.</p>
+<p>You can stop this reporting at any time: tap the (i) button on the map, choose Mapbox Telemetry, then Stop participating.</p>
+<h3>Push notification token</h3>
+<p>If you enable notifications, we store a technical identifier called a <strong>push token</strong>. It allows notification services to deliver a message to your device.</p>
+<p>A push token can be linked to your MyTunnelPal account, so we treat it as personal data.</p>
+<h3>Tunnel marketing choices</h3>
+<p>We record:</p>
+<ul>
+<li>which tunnel you agreed to hear from;</li>
+<li>which communication channel you agreed to;</li>
+<li>when you gave consent;</li>
+<li>when you withdrew it;</li>
+<li>which version of the consent wording you were shown; and</li>
+<li>when we offered you the choice, so we don&#39;t keep asking.</li>
+</ul>
+<p>We explain why we keep this history in sections 4 and 8.</p>
+<h3>Crash reports</h3>
+<p>MyTunnelPal does not use product analytics. We do not track which screens you visit or how you use the app.</p>
+<p>If the app crashes or hits a serious error, it sends a crash report to Sentry, our crash-reporting provider, hosted in the European Union. A crash report contains technical details about the error, such as what went wrong in the app&#39;s code, the app version, your device type and operating system. It does not include your name, email address or account ID, and we never record your screen. Sentry is set not to store your IP address.</p>
+<p>We use crash reports only to find and fix problems.</p>
+<h3>Technical and security information</h3>
+<p>Like most online services, our systems may create limited technical records when you connect to MyTunnelPal.</p>
+<p>These can include:</p>
+<ul>
+<li>IP address;</li>
+<li>timestamps;</li>
+<li>authentication and login events;</li>
+<li>app and operating-system version;</li>
+<li>device or connection information;</li>
+<li>API and server request information; and</li>
+<li>security or error logs.</li>
+</ul>
+<p>We use these records to operate, secure and troubleshoot the service.</p>
+<h3>Support messages and reports</h3>
+<p>If you contact us for help or report a problem, we receive the information you choose to send us, together with your contact details and any technical information needed to investigate the issue.</p>
+<p>If you contact us on behalf of a tunnel, for example to claim a tunnel&#39;s page, we also receive the business details you send, such as your name, your role and the tunnel you represent.</p>
+<p>The same applies if you report an account that you believe belongs to someone under 13.</p>
+<h3>Age-protection records</h3>
+<p>We may keep limited records of events such as changes to a date of birth, an age-related account restriction, or an underage-account report where necessary to apply and protect our age rules.</p>
+<p>These records are not used for advertising.</p>
+<h3>What we do not collect</h3>
+<p>We do not collect your contacts.</p>
+<p>We do not access your photo library except when you actively choose a photo to use for a feature such as your profile photo.</p>
+<p>We do not build a precise location history.</p>
+<p>We do not currently collect payment-card details from flyers.</p>
+<p>If you use fingerprint or face authentication to unlock the app, the biometric check happens through your device&#39;s own security system. MyTunnelPal does not receive your fingerprint, facial scan or other biometric template. We only receive the result needed to know whether the device approved the authentication.</p>
+<hr>
+<h2>3. Why we use your data, and the legal reason for each use</h2>
+<p>UK and European data protection law requires a valid reason, called a <strong>lawful basis</strong>, when personal data is used.</p>
+<p>Here is how that applies to MyTunnelPal.</p>
+<h3>To create and run your account</h3>
+<p>We use your account details and the information needed to provide the flight log, skill map, profile and other features you choose to use.</p>
+<p><strong>Legal basis:</strong></p>
+<ul>
+<li>if you are 18 or over: performance of our contract with you;</li>
+<li>if you are 13 to 17: our legitimate interests in providing you with the MyTunnelPal service you have chosen to use (section 5 explains why).</li>
+</ul>
+<p>Some profile information is optional. If you do not provide an optional field, you can still use the app without that part of your profile.</p>
+<h3>To apply age protections</h3>
+<p>We use your date of birth to:</p>
+<ul>
+<li>prevent accounts for users under 13;</li>
+<li>apply higher-privacy defaults to users aged 13 to 17;</li>
+<li>exclude under-18s from operator marketing;</li>
+<li>restrict age-limited features; and</li>
+<li>ask for a fresh marketing choice when someone turns 18.</li>
+</ul>
+<p><strong>Legal basis:</strong> our legitimate interests in protecting younger users and applying age-appropriate safeguards and, for users aged 18 and over, performance of our contract with you.</p>
+<p>We do not use your age to target advertising at you.</p>
+<h3>To send service notifications</h3>
+<p>These are messages connected to the service itself, such as account notices or something you specifically asked the app to tell you about.</p>
+<p>They are separate from operator marketing.</p>
+<p><strong>Legal basis:</strong> for users aged 18 and over, performance of our contract with you; for users aged 13 to 17, our legitimate interests in providing the service. For all users, where appropriate, our legitimate interest in operating the service and keeping you informed about your account.</p>
+<h3>To send tunnel marketing</h3>
+<p>Tunnel marketing is only sent where you have made a specific marketing choice for that tunnel.</p>
+<p><strong>Legal basis:</strong> consent.</p>
+<p>You can withdraw that consent at any time. Withdrawing marketing consent does not stop you using the rest of MyTunnelPal.</p>
+<h3>To understand and improve the app</h3>
+<p>We use the crash reports described in section 2 to find and fix problems in MyTunnelPal.</p>
+<p><strong>Legal basis:</strong> our legitimate interests in keeping MyTunnelPal working reliably. You can object at any time by contacting us.</p>
+<h3>To keep MyTunnelPal secure</h3>
+<p>We use technical, authentication and security records to investigate errors, misuse, attempted unauthorised access and other security problems.</p>
+<p><strong>Legal basis:</strong> our legitimate interests in protecting MyTunnelPal and its users, and legal obligations where a particular obligation applies.</p>
+<h3>To respond to you</h3>
+<p>If you contact support, contact us on behalf of a tunnel, make a privacy request or report a concern, we use the information you send us to respond and investigate.</p>
+<p><strong>Legal basis:</strong> performance of our contract, our legitimate interests in supporting and protecting the service, and compliance with legal obligations where relevant.</p>
+<h3>To keep evidence of marketing choices</h3>
+<p>We retain a limited record of marketing consent and withdrawal so we can demonstrate what you actually agreed to.</p>
+<p><strong>Legal basis:</strong> our legitimate interests in demonstrating compliance, handling complaints and establishing, exercising or defending legal claims.</p>
+<h3>Automated rules</h3>
+<p>MyTunnelPal automatically applies some rules based on your date of birth. For example, an under-13 date of birth prevents account use and an under-18 account is excluded from operator marketing.</p>
+<p>These rules exist to apply age protections. We do not use solely automated processing to make decisions about you that produce legal or similarly significant effects for commercial profiling purposes.</p>
+<p>If your date of birth is wrong and an age rule has been applied incorrectly, contact us.</p>
+<hr>
+<h2>4. Marketing from tunnel operators</h2>
+<p>This deserves its own section because operator marketing is part of how MyTunnelPal plans to make money, and we want to be completely straight about how it works.</p>
+<p>Tunnel operators can pay MyTunnelPal for tools that let them communicate with flyers.</p>
+<p>But they cannot simply choose everybody who uses the app.</p>
+<p>You can only receive operator marketing where you have <strong>explicitly opted in for that specific tunnel</strong>.</p>
+<p>The consent control:</p>
+<ul>
+<li>names the tunnel;</li>
+<li>makes clear the message comes from that tunnel and is delivered by MyTunnelPal;</li>
+<li>is separate from other choices;</li>
+<li>starts unticked; and</li>
+<li>requires an active choice from you.</li>
+</ul>
+<p>Nothing else you do in MyTunnelPal counts as marketing consent.</p>
+<p>In particular:</p>
+<p><strong>Favouriting or following a tunnel does not opt you into marketing from it.</strong></p>
+<p>A favourite may determine which tunnels MyTunnelPal shows you as options on a marketing-preferences screen. You still have to actively choose whether you want marketing from each one.</p>
+<h3>What the tunnel receives</h3>
+<p>The tunnel operator does not receive your:</p>
+<ul>
+<li>name;</li>
+<li>email address;</li>
+<li>push token;</li>
+<li>date of birth;</li>
+<li>precise location; or</li>
+<li>individual flight history.</li>
+</ul>
+<p>The operator gives MyTunnelPal the campaign it wants to send. MyTunnelPal decides which accounts have the required consent and delivers the message.</p>
+<p>Operators may receive aggregate campaign information, such as how many eligible flyers a campaign reached. Reporting is designed to show numbers, not identify individual flyers.</p>
+<h3>How to stop operator marketing</h3>
+<p>You can withdraw your consent for any tunnel at any time, from <strong>Tunnel alerts</strong> in your profile or from that tunnel&#39;s page. You can also turn off all tunnels at once.</p>
+<p>Marketing messages will also provide or lead to a simple way to manage that marketing choice.</p>
+<p>Withdrawal applies to future marketing. It does not affect anything else about your MyTunnelPal account.</p>
+<p>If you turn 18 while using MyTunnelPal, you are <strong>not</strong> automatically placed into any marketing audience. You have to make a new, active choice.</p>
+<h3>Our consent record</h3>
+<p>We keep an append-only history of marketing consent and withdrawal, including the tunnel, channel, date and version of the wording shown to you.</p>
+<p>That means changing your current preference does not rewrite history. It creates a new record showing what changed and when.</p>
+<p>This protects both you and us by preserving evidence of what was actually agreed.</p>
+<p>If we introduce a new marketing channel, such as email, having agreed to push notifications will not automatically opt you into email unless the consent you were shown clearly covered both.</p>
+<hr>
+<h2>5. Users under 18</h2>
+<p>MyTunnelPal is designed to be used by teenage flyers as well as adults, so younger users get additional protections.</p>
+<h3>Minimum age: 13</h3>
+<p>You must be at least 13 to have your own MyTunnelPal account.</p>
+<p>If an account declares a date of birth under 13, it cannot be used.</p>
+<p>If we discover that an account belongs to someone under 13, we may restrict it while we investigate and delete the account and associated personal data where appropriate.</p>
+<p>MyTunnelPal does not currently operate a parental-consent account flow for children under 13.</p>
+<h3>If you are 13 to 17</h3>
+<p>You can use the core parts of MyTunnelPal, including logging sessions, tracking skills and finding tunnels.</p>
+<p>But additional rules apply:</p>
+<ul>
+<li><strong>No tunnel marketing.</strong> You are excluded from operator marketing audiences on our servers.</li>
+<li><strong>Your profile is private.</strong> Other users can&#39;t see your profile while you&#39;re under 18.</li>
+<li><strong>No automatic move into marketing at 18.</strong> You must make a fresh choice after turning 18.</li>
+<li><strong>No product analytics.</strong> MyTunnelPal does not track how anyone uses the app, and crash reports never include who you are.</li>
+<li><strong>Location is not shared with other users.</strong> Using the tunnel map does not make your live device location visible to another flyer or tunnel operator.</li>
+<li><strong>Age-restricted features stay unavailable.</strong> Marketplace contact, direct messaging or other features marked 18+ cannot be used by a minor account.</li>
+</ul>
+<p>We do not nudge younger users to weaken their privacy settings.</p>
+<p>Where a younger user is given a privacy choice, we aim to explain that choice at the point where it matters, rather than expecting them to understand this entire document first.</p>
+<h4>Why we use &quot;legitimate interests&quot; for you</h4>
+<p>For adults, MyTunnelPal works like a contract: you sign up, and we provide the app.</p>
+<p>The rules on whether people under 18 can make a contract are different from country to country. So for you, we don&#39;t rely on a contract. Instead we rely on something called <strong>legitimate interests</strong>. This means we only use your data to give you the app you signed up for, and we have checked that this is fair to you, with extra protections because you&#39;re under 18.</p>
+<p><strong>You have the right to object.</strong> That means you can ask us to stop using your data (section 9 explains this right).</p>
+<p>Your account, profile, flight log, skill map, tunnel choices and notifications <em>are</em> the app, so we can&#39;t keep running MyTunnelPal for you without them. If you object, we stop by <strong>deleting your account</strong>. You can do this yourself in the app&#39;s settings, or by emailing <strong><a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a></strong>. Section 10 explains what happens when an account is deleted.</p>
+<p>If there&#39;s just one thing you&#39;d rather we didn&#39;t have, like your photo, city or gender, you don&#39;t need to delete your account. You can remove it yourself in your profile at any time.</p>
+<h3>Turning 18</h3>
+<p>Turning 18 changes which features you may be eligible to use, but it does not silently remove your privacy choices.</p>
+<p>In particular, we do not automatically enable marketing.</p>
+<p>We&#39;ll ask you once whether you&#39;d like to hear from your tunnels. Nothing changes unless you say yes.</p>
+<p>From the day after your 18th birthday, other users can see the same basic profile details as for any adult, listed in section 2. Your email, date of birth, city, gender and flight sessions always stay private.</p>
+<h3>Changing your date of birth</h3>
+<p>Changing your date of birth may cause MyTunnelPal to apply different age protections.</p>
+<p>We may keep an audit record of changes where necessary to stop people bypassing age restrictions.</p>
+<p>If an edit indicates that the account holder is under 13, we may restrict the account until the information is corrected or the situation has been reviewed.</p>
+<h3>Reporting an underage account</h3>
+<p>If you believe someone under 13 has created a MyTunnelPal account, contact <strong><a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a></strong> or use the reporting tools provided in the app.</p>
+<p>We will investigate and take appropriate action.</p>
+<h3>One important safety point</h3>
+<p>The MyTunnelPal skill map is a personal record.</p>
+<p>It is <strong>not</strong> instruction, certification or permission to attempt a skill.</p>
+<p>Indoor skydiving skills should be learned and practised under appropriate supervision from a qualified coach or tunnel instructor.</p>
+<hr>
+<h2>6. Who receives your data</h2>
+<p>We use a small number of specialist technology providers to operate MyTunnelPal.</p>
+<p>Not every provider has exactly the same legal role. Some process personal data on our instructions. Others may process limited data for their own purposes under their own privacy terms.</p>
+<h3>Supabase</h3>
+<p>Supabase provides our database, authentication, storage and backend infrastructure.</p>
+<p>Our main MyTunnelPal database and storage are configured in the <strong>London, United Kingdom</strong> region.</p>
+<h3>Mapbox</h3>
+<p>Mapbox provides the maps used to display tunnel locations.</p>
+<p>To show the map, Mapbox receives the technical requests your phone sends, including your IP address and the area of the map you are viewing, and its map software may send usage information about how the map is used. Mapbox never receives your device&#39;s location from MyTunnelPal.</p>
+<p>For that usage information, Mapbox decides its own purposes and may act as an independent data controller rather than simply processing data on MyTunnelPal&#39;s instructions.</p>
+<p>You can stop Mapbox usage reporting at any time with the (i) button on the map (Mapbox Telemetry, then Stop participating).</p>
+<h3>Sentry</h3>
+<p>Sentry provides crash reporting. Our Sentry service is hosted in the European Union and receives only the crash reports described in section 2.</p>
+<h3>Resend</h3>
+<p>Resend sends our emails, such as sign-up confirmation and password reset emails, and forwards to our support inbox the messages you send us through Contact Us. It receives your email address, the content of the email and technical delivery information.</p>
+<h3>Expo, Apple and Google</h3>
+<p>Expo and the notification infrastructure operated by Apple and Google help deliver notifications to your device.</p>
+<p>They may receive the push token, technical delivery information and the contents of the notification while it is being delivered.</p>
+<p>Apple and Google may also process information when you use their sign-in services.</p>
+<h3>Professional advisers and service providers</h3>
+<p>Where necessary, we may give limited information to professional advisers or suppliers supporting MyTunnelPal, for example lawyers or security specialists.</p>
+<p>They only receive the information reasonably necessary for the work they are doing.</p>
+<h3>Legal requirements</h3>
+<p>We may disclose information where we genuinely have to do so by law, for example in response to a valid court order or lawful request from an authority.</p>
+<p>We do not hand over user information simply because somebody asks for it.</p>
+<h3>If the business changes ownership</h3>
+<p>If MyTunnelPal or 80s Kiddo Ltd is sold, merged, reorganised or transferred, personal data may form part of that transaction.</p>
+<p>Any new owner would still have to handle personal data in accordance with applicable data protection law. If a change materially affects the way your data is used, we will tell you where required.</p>
+<h3>What we do not do</h3>
+<p>We do not sell your personal data.</p>
+<p>We do not provide identifiable flyer lists to tunnel operators.</p>
+<p>We do not share your personal data with third-party advertisers so they can independently advertise to you.</p>
+<hr>
+<h2>7. Where your data is processed</h2>
+<p>Our main account database and storage are hosted using Supabase infrastructure configured in <strong>London, United Kingdom</strong>.</p>
+<p>That does not mean every technical request connected to MyTunnelPal stays physically inside the UK.</p>
+<p>Some providers operate internationally. In particular, Mapbox processes product data in the United States, and companies involved in notifications, authentication or infrastructure may process limited data in other countries as part of providing their services.</p>
+<p>When personal data is transferred internationally by us or by a processor acting for us, a recognised legal safeguard applies. For our current providers:</p>
+<ul>
+<li><strong>Mapbox</strong> is certified under the EU-US Data Privacy Framework and its UK Extension, with EU Standard Contractual Clauses as a fallback where required.</li>
+<li><strong>Expo</strong> states compliance with the EU-US Data Privacy Framework (including for UK individuals) and incorporates EU Standard Contractual Clauses in its terms.</li>
+<li><strong>Apple and Google</strong> are certified under the EU-US Data Privacy Framework and its UK Extension.</li>
+<li><strong>Sentry</strong> hosts our crash reports in the European Union. Where its US company needs access, for example to provide support, Sentry is certified under the EU-US Data Privacy Framework and its UK Extension.</li>
+<li><strong>Resend</strong> stores email data in the United States. It is certified under the EU-US Data Privacy Framework and its UK Extension, with EU Standard Contractual Clauses in its data processing terms.</li>
+<li><strong>Supabase</strong> hosts our database in London, so no international transfer arises for our core data.</li>
+</ul>
+<p>We re-check these certifications when we review this policy, since participation in transfer frameworks can change.</p>
+<p>Where a provider acts as an independent controller for some processing, it is responsible for the international-transfer arrangements that apply to that processing.</p>
+<p>If you live in the European Union, equivalent EU GDPR transfer rules apply.</p>
+<p>You can contact us if you want more information about the safeguard used for a particular transfer.</p>
+<hr>
+<h2>8. How long we keep your data</h2>
+<p>We do not want to keep personal data indefinitely just because storage is cheap.</p>
+<h3>While your account is open</h3>
+<p>We keep your account, profile, flight sessions, skills and tunnel preferences for as long as you maintain the account, unless you delete particular information earlier.</p>
+<h3>Push tokens</h3>
+<p>We keep a push token while it is needed to deliver notifications to your device. When you sign out, we delete the token for that device. If your phone is offline when you sign out, the token stays until you delete your account. All your push tokens are deleted when you delete your account.</p>
+<h3>Technical, crash and security records</h3>
+<p>We retain technical and crash report information only for as long as reasonably necessary for the purpose for which it was collected.</p>
+<p>Different systems may have different retention periods depending on whether the information is needed for security or troubleshooting.</p>
+<p>We configure those periods with data minimisation in mind.</p>
+<h3>Support correspondence</h3>
+<p>If you contact us, we retain the correspondence for as long as reasonably necessary to deal with the issue and maintain any records we need for support, security, legal or compliance purposes.</p>
+<p>Messages you send through the Contact Us form in the app are deleted when you delete your account.</p>
+<h3>When you delete your account</h3>
+<p>If you delete your account in the app, your live account data, including your profile photo, is deleted straight away.</p>
+<p>If you ask us to delete it another way, for example by email or through our website, we confirm the request is yours and complete the deletion from our active systems within <strong>30 days</strong>.</p>
+<p>Either way, we keep only limited information we have a lawful reason to retain, and residual copies may remain in encrypted backups until those backups are automatically replaced.</p>
+<p>Our current backup cycle may retain deleted information for up to <strong>35 additional days</strong>.</p>
+<p>Backup copies are not used as active account data. If a backup ever has to be restored, deletion records are used so previously deleted information is not quietly returned to normal use.</p>
+<h3>Marketing consent records</h3>
+<p>We keep a limited record of marketing consent grants and withdrawals for up to <strong>six years after the relevant event</strong>, where necessary to demonstrate compliance or establish, exercise or defend legal claims.</p>
+<p>After the underlying account has been deleted, we minimise this record and do not retain the person&#39;s ordinary profile information simply to support the consent log.</p>
+<p>The retained record may use a pseudonymous internal identifier where a link is still necessary for compliance purposes.</p>
+<p><strong>Pseudonymous does not mean anonymous.</strong> If a record could still be connected to a person using additional information, we continue to treat it as personal data.</p>
+<p>These records are not used to send marketing, rebuild deleted profiles or perform product analytics.</p>
+<p>We chose six years because it matches the general time limit for bringing civil claims in the UK, which is the reason the record exists at all.</p>
+<h3>Account reports</h3>
+<p>If an account is reported, we keep the report and a record of what we did for 24 months after we close it, even if either account is deleted. Once an account is deleted, the record is no longer linked to its profile.</p>
+<h3>Other legal exceptions</h3>
+<p>Sometimes we may need to keep specific information for longer because of a legal requirement, security investigation, dispute or legal claim.</p>
+<p>If that applies, we restrict the information to that purpose rather than continuing to use it as ordinary app data.</p>
+<hr>
+<h2>9. Your rights</h2>
+<p>Data protection law gives you rights over your personal data.</p>
+<p>Exactly which rights apply can depend on the type of processing and the law where you live, but the main UK and EU rights include the following.</p>
+<h3>Access</h3>
+<p>You can ask us for a copy of the personal data we hold about you.</p>
+<h3>Rectification</h3>
+<p>You can ask us to correct information that is inaccurate or incomplete.</p>
+<p>A lot of your information can be corrected directly inside MyTunnelPal.</p>
+<h3>Erasure</h3>
+<p>You can ask us to delete your personal data.</p>
+<p>Deleting your account is normally the fastest way to do that.</p>
+<p>The limited retention exceptions described in section 8 still apply.</p>
+<h3>Restriction</h3>
+<p>In some circumstances you can ask us to pause or restrict the way we use particular information while an issue is being resolved.</p>
+<h3>Portability</h3>
+<p>Where the legal requirements are met, you can ask for personal data you provided to us in a structured, commonly used and machine-readable format.</p>
+<h3>Withdraw consent</h3>
+<p>Where we rely on your consent, you can withdraw it at any time.</p>
+<p>For tunnel marketing, you can do this directly inside the app.</p>
+<p>Withdrawal does not make anything we lawfully did before you withdrew consent invalid.</p>
+<h3>Your right to object</h3>
+<p><strong>You have the right to object where we process your personal data on the basis of legitimate interests.</strong></p>
+<p>Tell us what processing you object to and why it affects you. We will consider your request and stop the processing unless we have a lawful reason that allows us to continue.</p>
+<p><strong>Your right to object to direct marketing is absolute.</strong> If you tell us to stop using your personal data for direct marketing, we will stop.</p>
+<p>You do not need to close your MyTunnelPal account to stop operator marketing.</p>
+<h3>Making a request</h3>
+<p>You can exercise your rights by contacting <strong><a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a></strong>.</p>
+<p>We normally respond within one month. In some legally permitted circumstances, a complex request may take longer, in which case we will explain why.</p>
+<p>We may need to ask for enough information to confirm that the request really came from you.</p>
+<h3>Complaints</h3>
+<p>If you are unhappy with how we have handled your personal data, you can complain to the UK&#39;s data protection regulator, the <strong>Information Commissioner&#39;s Office (ICO)</strong>.</p>
+<p>If you are in the European Union, you can also complain to the data protection authority responsible for your country or region.</p>
+<p>We would appreciate the chance to fix a problem first, but you do not need our permission to complain to a regulator.</p>
+<hr>
+<h2>10. Deleting your account</h2>
+<p>You can initiate account deletion from inside MyTunnelPal through your account or profile settings.</p>
+<p>You can also request deletion without using the app through the account-deletion route provided on the MyTunnelPal website, including by contacting <strong><a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a></strong>.</p>
+<p>When you delete your account:</p>
+<ol>
+<li>your account, profile, profile photo, flight log, skill map, tunnel choices and notifications are deleted: straight away if you delete your account in the app (and you are signed out), or within 30 days if you ask us by email or through our website;</li>
+<li>if you signed in with Apple and delete your account in the app, we also ask Apple to revoke MyTunnelPal&#39;s access to your Apple ID. If you ask us by email instead, we can&#39;t do this for you, so we&#39;ll tell you how to remove MyTunnelPal yourself in your Apple ID settings;</li>
+<li>backup copies expire through the backup cycle described in section 8; and</li>
+<li>only limited records that we have a lawful reason to keep remain, such as the compliance records explained in section 8.</li>
+</ol>
+<p>Temporarily disabling an account is not treated as account deletion.</p>
+<p>If you ask us to delete your account, we also take reasonable steps to ensure personal data held for us by relevant processors is deleted where required.</p>
+<hr>
+<h2>11. EU Representative</h2>
+<p>We have appointed a representative in the European Union under Article 27 of the EU General Data Protection Regulation, for questions about how we process the personal data of people in the EU:</p>
+<p><strong>Data Protection Representative Limited (trading as DataRep)</strong>
+Incorporated in Ireland, company registration number 616588
+77 Camden Street Lower, Dublin, D02 XE80, Ireland
+Email: <a href="mailto:datarequest@datarep.com">datarequest@datarep.com</a>
+Telephone: +353 (1) 919 8899</p>
+<p>Please put &quot;MyTunnelPal&quot; in the subject line.</p>
+<p>You may contact DataRep on matters relating to the processing of your personal data by MyTunnelPal, in addition to contacting us directly at <a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a>.</p>
+<hr>
+<h2>12. If you live somewhere else</h2>
+<p>Where MyTunnelPal is made available outside the United Kingdom and European Union, local privacy laws may give you additional rights.</p>
+<p>Nothing in this policy is intended to take away rights that the law where you live gives you.</p>
+<p>If you want to exercise a local privacy right, contact us and tell us what you are asking for.</p>
+<hr>
+<h2>13. Security</h2>
+<p>We use technical and organisational measures designed to protect your information.</p>
+<p>These include authentication controls, encrypted communications, database access rules, restricted administrative access and security measures provided by our infrastructure providers.</p>
+<p>Our database is designed so that ordinary users cannot simply read another user&#39;s private account data.</p>
+<p>Authorised systems or personnel may still access personal data where that access is genuinely necessary to operate, secure, troubleshoot or support MyTunnelPal.</p>
+<p>No online service can promise perfect security. If we discover a personal-data breach, we will investigate it and make any notifications required by law.</p>
+<hr>
+<h2>14. Changes to this policy</h2>
+<p>This policy describes how MyTunnelPal uses personal data at the date shown at the top.</p>
+<p>We do not currently run third-party advertising in the app.</p>
+<p>If we introduce a new feature, provider or use of personal data, we will review this policy <strong>before</strong> that processing begins.</p>
+<p>Where a change is significant, we will bring it to your attention in the app or through another appropriate channel rather than quietly changing the document and assuming you noticed.</p>
+<p>If a new use requires your consent, updating this policy is not enough. We will ask you to make the required choice.</p>
+<p>We will also raise the version number and update the change log below.</p>
+<hr>
+<h2>Change log</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>24 November 2026</td>
+<td>First published version.</td>
+</tr>
+</tbody></table></div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Unbounded',sans-serif;font-weight:700;margin-bottom:6px">MyTunnelPal</div>
+      <div>© 2026 80s Kiddo Ltd. All rights reserved.</div>
+    </div>
+    <div class="legal">
+      MyTunnelPal is an independent personal flight log and is not affiliated with, endorsed by, or a substitute for the International Bodyflight Association (IBA) or any tunnel operator's official progression system. Official skill sign-off at participating tunnels remains subject to the relevant operator's own programmes.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

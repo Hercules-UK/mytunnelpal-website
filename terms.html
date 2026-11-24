@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyTunnelPal Terms of Service</title>
+<meta name="description" content="The terms that apply when you use MyTunnelPal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#060A18;
+    --space-1:#0B1226;
+    --ink:#EAF0FF;
+    --ink-dim:#8B96B8;
+    --belly:#20D6FF;
+    --back:#A76BFF;
+    --hd:#FF5FA8;
+    --gold:#FFD700;
+    --green:#20FFAA;
+    --card:rgba(17,26,54,.72);
+    --stroke:rgba(139,150,184,.18);
+    --max:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    background:var(--space-0);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--belly);color:var(--space-0)}
+  h1,h2,h3{font-family:'Unbounded',sans-serif;line-height:1.15;font-weight:600}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--belly);font-weight:500;margin-bottom:14px;
+  }
+
+  /* ---------- star field ---------- */
+  .stars{position:fixed;inset:0;z-index:-2;background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, rgba(167,107,255,.14), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 110%, rgba(32,214,255,.10), transparent 60%),
+    var(--space-0);}
+  .stars svg{width:100%;height:100%}
+
+  /* ---------- header ---------- */
+  header.top{padding:26px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+  .logo svg{width:26px;height:26px}
+  .back-link{font-size:.85rem;color:var(--ink-dim);text-decoration:none}
+  .back-link:hover{color:var(--belly)}
+
+  /* ---------- content ---------- */
+  main{padding:56px 0 96px}
+  .content h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:18px}
+  .content p.lead{font-size:1.05rem;color:var(--ink-dim);max-width:38em;font-weight:300;margin-bottom:40px}
+
+  .card{
+    background:var(--card);border:1px solid var(--stroke);border-radius:22px;
+    padding:30px 32px;margin-bottom:24px;max-width:640px;
+  }
+  .card h2{font-size:1.05rem;margin-bottom:12px}
+  .card p{color:var(--ink-dim);font-weight:300;font-size:.95rem}
+  .card p + p{margin-top:10px}
+  .card a{color:var(--belly);text-decoration:none;font-weight:500}
+  .card a:hover{text-decoration:underline}
+  .card p b{font-weight:600}
+
+  .steps-list{list-style:none;margin-top:22px;display:grid;gap:16px;max-width:640px}
+  .steps-list li{display:flex;gap:14px;align-items:flex-start}
+  .steps-list .num{
+    flex:0 0 28px;height:28px;border-radius:50%;background:rgba(32,214,255,.14);
+    border:1px solid var(--belly);color:var(--belly);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Unbounded',sans-serif;font-size:.8rem;font-weight:600;
+  }
+  .steps-list .txt{color:var(--ink);font-size:.95rem;padding-top:2px}
+  .steps-list .txt b{display:block;margin-bottom:2px}
+  .steps-list .txt span{color:var(--ink-dim);font-weight:300}
+
+  .note{
+    max-width:640px;margin-top:32px;font-size:.85rem;color:var(--ink-dim);
+    border-left:2px solid var(--stroke);padding-left:18px;
+  }
+  .note a{color:var(--belly)}
+
+  footer{border-top:1px solid var(--stroke);padding:36px 0;font-size:.78rem;color:var(--ink-dim)}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer .legal{max-width:56em;font-size:.72rem;line-height:1.5}
+
+  @media(max-width:880px){
+    .top .wrap{justify-content:center}
+  }
+
+  /* ---------- legal document ---------- */
+  .doc{max-width:760px}
+  .doc h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:18px}
+  .doc h2{font-size:1.35rem;margin:48px 0 14px}
+  .doc h3{font-size:1.05rem;margin:32px 0 10px}
+  .doc h4{font-family:'Unbounded',sans-serif;font-size:.95rem;font-weight:600;margin:24px 0 8px}
+  .doc p,.doc li{color:var(--ink-dim);font-weight:300;font-size:.98rem}
+  .doc p{margin-bottom:14px}
+  .doc strong{color:var(--ink);font-weight:600}
+  .doc ul,.doc ol{margin:0 0 16px 1.4em}
+  .doc li{margin-bottom:6px}
+  .doc a{color:var(--belly);text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+  .doc a:hover{text-decoration:underline}
+  .doc hr{border:0;border-top:1px solid var(--stroke);margin:40px 0}
+  .doc blockquote{border-left:2px solid var(--stroke);padding-left:18px;margin:0 0 16px}
+  .doc .table-scroll{overflow-x:auto;margin:0 0 16px}
+  .doc table{border-collapse:collapse;width:100%;font-size:.9rem}
+  .doc th,.doc td{border:1px solid var(--stroke);padding:10px 12px;text-align:left;vertical-align:top}
+  .doc th{font-family:'Unbounded',sans-serif;font-weight:600;font-size:.8rem;color:var(--ink)}
+  .doc td{color:var(--ink-dim);font-weight:300}
+</style>
+</head>
+<body>
+
+<!-- ambient star field -->
+<div class="stars" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g fill="#EAF0FF">
+      <circle cx="120" cy="140" r="1.4"/><circle cx="340" cy="80"  r="1"/>
+      <circle cx="560" cy="210" r="1.6"/><circle cx="820" cy="60"  r="1.1"/>
+      <circle cx="1080" cy="170" r="1.4"/><circle cx="1300" cy="90" r="1"/>
+      <circle cx="200" cy="420" r="1"/><circle cx="480" cy="520" r="1.5"/>
+      <circle cx="760" cy="380" r="1"/><circle cx="1020" cy="500" r="1.3"/>
+      <circle cx="1260" cy="430" r="1.6"/><circle cx="90"  cy="700" r="1.2"/>
+      <circle cx="420" cy="780" r="1"/><circle cx="700" cy="690" r="1.4"/>
+      <circle cx="980" cy="800" r="1"/><circle cx="1240" cy="720" r="1.5"/>
+      <circle cx="1400" cy="300" r="1.1"/><circle cx="40" cy="300" r="1"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <circle cx="6" cy="20" r="3" fill="#20D6FF"/>
+        <circle cx="13" cy="7" r="2.4" fill="#A76BFF"/>
+        <circle cx="21" cy="16" r="2" fill="#FF5FA8"/>
+        <path d="M6 20 L13 7 L21 16" stroke="rgba(234,240,255,.5)" stroke-width="1"/>
+      </svg>
+      MyTunnelPal
+    </a>
+    <a class="back-link" href="/">&larr; Back to home</a>
+  </div>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<!-- Generated with marked@14.1.4 from docs/legal/terms-of-service.md in Hercules-UK/MyTunnelPal (commit a11ee5f). Do not edit the wording here: change the markdown and regenerate. -->
+<main class="wrap">
+  <article class="doc">
+<h1>MyTunnelPal Terms of Service</h1>
+<p><strong>Version 1.0</strong></p>
+<p><strong>Effective date: 24 November 2026</strong></p>
+<p>These terms are a contract between you and us. They explain what MyTunnelPal is, what you can expect from us, and what we expect from you. We&#39;ve written them to be read, not skimmed past. Please read them.</p>
+<p>We link to these terms where you create your account. By creating an account, including by continuing with Google or Apple, you agree to them. If you don&#39;t agree, please don&#39;t create an account or use MyTunnelPal.</p>
+<hr>
+<h2>1. Who we are</h2>
+<p>MyTunnelPal is operated by <strong>80S KIDDO LIMITED</strong>, trading as MyTunnelPal, a company registered in England and Wales (company number 15719938). In these terms, &quot;we&quot;, &quot;us&quot; and &quot;our&quot; mean 80S KIDDO LIMITED. &quot;You&quot; means the person using the app.</p>
+<p>You can contact us at <a href="mailto:support@mytunnelpal.com"><strong>support@mytunnelpal.com</strong></a>.</p>
+<h2>2. What MyTunnelPal is</h2>
+<p>MyTunnelPal is a free app for indoor skydivers (tunnel flyers). At its core, it lets you:</p>
+<ul>
+<li>Log your flying sessions as a personal record.</li>
+<li>Track your own skill progression on the constellation map.</li>
+<li>Discover wind tunnels around the world.</li>
+<li>Receive notifications you&#39;ve chosen to receive.</li>
+</ul>
+<h2>3. What MyTunnelPal is not</h2>
+<p>This section matters more than any other, so it comes early.</p>
+<p><strong>MyTunnelPal is a record, not an instruction.</strong> The skills and sessions in the app are self-reported personal records. They are based entirely on what you tell the app about your own flying.</p>
+<ul>
+<li>Marking a skill as achieved is <strong>not a certification</strong>. Nobody has verified it. It carries no official status anywhere.</li>
+<li>Nothing in the app is <strong>instruction or coaching</strong>. Skill names and descriptions exist so you can identify and record what you&#39;ve done, not so you can learn how to do it.</li>
+<li>Nothing in the app gives you <strong>permission to attempt anything</strong>. Whether you&#39;re ready to try a skill is a decision for you and a qualified coach, made at the tunnel, not in an app.</li>
+</ul>
+<p>Any skill order, level, badge, progress indicator, completion state or unlocked state is only a way to organise and motivate your personal record. It is not a training progression, a safety assessment, or a recommendation that you are ready to attempt a skill. Do not use it to decide what to attempt.</p>
+<p>Tunnel flying skills are learned under the supervision of a qualified coach or instructor, following the rules and progression requirements of the tunnel you fly at. MyTunnelPal is never a substitute for that supervision. If you&#39;re under 18, this applies with even more force: what you attempt should be decided with the coach or instructor supervising you at the tunnel, and the app does not change that.</p>
+<h2>4. Independence from the IBA, iFly and tunnel operators</h2>
+<p>MyTunnelPal is an independent platform and is not affiliated with, endorsed by, or sponsored by the International Bodyflight Association (IBA), iFly, or any tunnel operator.</p>
+<p>We name the IBA and iFly here only so there is no confusion about who we are. MyTunnelPal does not issue, verify or replace IBA skill ratings, sign-offs or any other certification scheme. Your progression in MyTunnelPal is your own personal record and sits alongside whatever certification path you choose, if any.</p>
+<h2>5. Age</h2>
+<p>You must be at least <strong>13 years old</strong> to use MyTunnelPal.</p>
+<p>We ask for your date of birth when you create your account. If your date of birth shows you are under 13, you can&#39;t use MyTunnelPal. If you started signing up with Google or Apple, the account that was started is deleted straight away. If an existing account&#39;s date of birth is changed to one that shows the user is under 13, we lock the account.</p>
+<p>How we handle age, dates of birth, and the extra protections that apply to users under 18 is explained in our <a href="https://mytunnelpal.com/privacy">Privacy Policy</a>. We don&#39;t repeat those details here.</p>
+<p>If you&#39;re under 18, these terms apply to the extent the law allows. If the law where you live requires permission from a parent or guardian to use MyTunnelPal, you must have that permission.</p>
+<h2>6. Your account</h2>
+<ul>
+<li>Keep your login details secure. You&#39;re responsible for activity you carry out or authorise through your account.</li>
+<li>Give us accurate information, including your date of birth, and keep it up to date.</li>
+<li>One account per person. Your account is yours and can&#39;t be sold or transferred.</li>
+<li>If you think someone else has accessed your account, tell us at <a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a> and change your password.</li>
+</ul>
+<h2>7. Acceptable use</h2>
+<p>Most of what we ask is common sense. When you use MyTunnelPal, you agree not to:</p>
+<ul>
+<li>Break the law, or use the app to help anyone else break the law.</li>
+<li>Impersonate another person, or falsely claim that a coach or tunnel is connected to your flying when they are not.</li>
+<li>Upload or use content that is sexually explicit, hateful or discriminatory, threatening or violent, harassing or bullying, fraudulent, illegal, or that infringes someone else&#39;s rights. This includes usernames, display names and profile photos.</li>
+<li>Harass, threaten or abuse anyone.</li>
+<li>Try to access other users&#39; data, probe or interfere with our systems, or get around security or age protections.</li>
+<li>Systematically scrape, harvest or extract substantial parts of our tunnel database, skill taxonomy or other protected content, whether manually or with automated tools, except where the law allows it.</li>
+<li>Use the app to send spam or unsolicited marketing.</li>
+<li>Reverse engineer, copy or resell the app or any part of it, except where applicable law expressly allows it.</li>
+</ul>
+<p>If you believe something connected with MyTunnelPal breaks these rules or is illegal, tell us through Contact Us in the app, where you can report an account, or email <a href="mailto:support@mytunnelpal.com"><strong>support@mytunnelpal.com</strong></a>. Reports, and any decision to restrict or remove content or accounts, are reviewed by a person at MyTunnelPal. We don&#39;t use automated tools to moderate content or make decisions about accounts. We may review, restrict or remove content or accounts where reasonably necessary to enforce these terms or comply with the law.</p>
+<p>If you spot a security problem, please tell us at <a href="mailto:support@mytunnelpal.com">support@mytunnelpal.com</a> rather than exploiting it.</p>
+<h2>8. Your content</h2>
+<p>Some things in the app come from you: your session logs and notes, the coach names you record, your username, display name and profile photo, and the personal notes you attach to skills.</p>
+<ul>
+<li><strong>It stays yours.</strong> You own your content.</li>
+<li><strong>You give us permission to handle it.</strong> You grant us a non-exclusive, worldwide, royalty-free licence to host, copy, store, format, resize, transmit and display your content, only as needed to operate, secure and provide MyTunnelPal, including through service providers acting for us. This licence ends when the content is deleted from our systems, except for temporary backups or retention required by law. What is and isn&#39;t visible to other users is set out in the Privacy Policy.</li>
+<li><strong>You&#39;re responsible for it.</strong> Make sure your content doesn&#39;t break the acceptable use rules above or infringe anyone&#39;s rights.</li>
+</ul>
+<p>We can remove content that breaks these terms.</p>
+<h2>9. Price</h2>
+<p>MyTunnelPal is free. There are no purchases, subscriptions or paid features in the app at launch. If that ever changes, we&#39;ll update these terms first and tell you clearly before anything costs money.</p>
+<h2>10. Tunnel information</h2>
+<p>The app includes information about wind tunnels worldwide: locations, specifications, contact details and similar. We work to keep it accurate, but tunnels open, close, rebrand and change their details all the time, and we can&#39;t guarantee any of it is current or correct.</p>
+<p>Always confirm details with the tunnel directly before travelling or booking. Tunnel information in MyTunnelPal is a starting point, not a promise.</p>
+<h2>11. Messages from tunnels</h2>
+<p>We may allow tunnel operators to send marketing messages to flyers through MyTunnelPal. The flyer-facing rules are simple:</p>
+<ul>
+<li>Marketing messages reach you <strong>only if you&#39;ve turned them on</strong>, per tunnel. You can turn any tunnel off at any time in the app.</li>
+<li>Marketing is only available to users aged <strong>18 or over</strong>.</li>
+<li>Messages are sent by MyTunnelPal. Operators do not receive your contact details or a list identifying the users selected for their campaign. MyTunnelPal delivers the message based on your settings.</li>
+<li>Account, security and other non-marketing service notifications are separate. How marketing and notification choices work is explained in the Privacy Policy.</li>
+</ul>
+<p>Our commercial relationship with tunnel operators is governed by a separate agreement between us and them. It doesn&#39;t change your rights under these terms.</p>
+<h2>12. Early access</h2>
+<p>MyTunnelPal is a new app.</p>
+<p><strong>Before public launch</strong>, the whole app may run as a closed beta or testing release. During that testing period, features may change, break or be removed, and we may need to reset or delete data. Where we reasonably can, we&#39;ll warn you before doing so.</p>
+<p><strong>After public launch</strong>, some individual features may be labelled beta or early access. If a beta feature may require us to reset or delete data created specifically through that feature, we&#39;ll make that clear, and where reasonably practical we&#39;ll warn you first. Your session logs and skill records outside a beta feature are not affected by this section after launch.</p>
+<p>None of this reduces your legal rights, and the rest of these terms still apply during early access.</p>
+<h2>13. Suspending or closing accounts</h2>
+<p>We may suspend or close your account if:</p>
+<ul>
+<li>You seriously or repeatedly break these terms.</li>
+<li>Your date of birth shows you are under 13 (the account is locked, and then deleted in line with the Privacy Policy).</li>
+<li>We&#39;re required to by law.</li>
+</ul>
+<p>We may also temporarily restrict an account where reasonably necessary to protect MyTunnelPal or other users, or while we investigate a suspected serious breach of these terms. We&#39;ll remove the restriction when it&#39;s no longer reasonably needed.</p>
+<p>Where it&#39;s fair and practical to do so, we&#39;ll warn you and give you a chance to put things right first. For serious cases (for example, attacks on our systems or harm to other users) we may act immediately. Where required by law, we&#39;ll tell you why we&#39;ve restricted or closed your account and how you can challenge the decision.</p>
+<p>You can close your own account at any time, in the app or via our website. What happens to your data when an account is closed, locked or deleted is set out in the Privacy Policy.</p>
+<p>If we decide to shut down MyTunnelPal entirely, we&#39;ll give you reasonable notice where reasonably practical, unless we need to shut it down sooner for legal, security or technical reasons, or because of circumstances outside our reasonable control. We&#39;ll tell you what options are available to keep a copy of information you want to retain.</p>
+<h2>14. Our intellectual property</h2>
+<p>The app&#39;s software, design, branding, the constellation map, and the content, selection and arrangement of data that we create belong to us or our licensors. This doesn&#39;t claim ownership of your content, or of third-party rights or facts that we don&#39;t own.</p>
+<p>Subject to any app-store licence that applies, we give you a personal, non-transferable right to use MyTunnelPal for your personal, non-commercial use. That right ends if your account is closed. It doesn&#39;t include any right to copy, sell or build on our protected content or data, except where applicable law allows it.</p>
+<h2>15. Liability</h2>
+<p>This section limits our liability, but only as far as the law allows. First, the things we <strong>do not</strong> limit or exclude:</p>
+<ul>
+<li>Liability for death or personal injury caused by our negligence.</li>
+<li>Liability for fraud or fraudulent misrepresentation.</li>
+<li>Any other liability that the law does not allow us to exclude or limit.</li>
+<li>Your legal rights as a consumer. Nothing in these terms takes those away.</li>
+</ul>
+<p>Within those limits:</p>
+<ul>
+<li><strong>Flying decisions are yours.</strong> Tunnel flying is a physical sport with real risks, managed by tunnel operators and coaches under their own rules and waivers. MyTunnelPal is a record-keeping tool. We do not assess your competence or readiness to perform any skill. We are not responsible for decisions you make about what to attempt in the tunnel, and the app must never be your reason for attempting anything.</li>
+<li><strong>Information in the app.</strong> We don&#39;t guarantee that tunnel information, or user-provided or self-reported records, are complete or current. You should confirm tunnel information with the tunnel directly. Subject to the limits above, we are not responsible for loss caused by information supplied by you or another user, or by using MyTunnelPal as instruction, certification or a readiness assessment contrary to section 3.</li>
+<li><strong>Availability.</strong> MyTunnelPal is free at launch. We aim to keep it available and accurate, but we don&#39;t promise that it will always be uninterrupted or error-free.</li>
+<li>We are not responsible for losses that were not a foreseeable result of our breaking these terms, or for business losses. MyTunnelPal is for personal use.</li>
+</ul>
+<h2>16. Changes to MyTunnelPal</h2>
+<p>We may update, add, change or remove features to improve MyTunnelPal, keep it secure, meet legal or technical requirements, or adapt to changes in the services we rely on. If a change materially reduces your use of a core feature, we&#39;ll give you reasonable notice where required by law and explain any rights you have.</p>
+<h2>17. Changes to these terms</h2>
+<p>These terms are versioned, with the change log at the bottom of this document.</p>
+<p>We may change these terms to reflect changes in law, security requirements, the way MyTunnelPal operates, or features we add, remove or change.</p>
+<p>If a change materially affects your rights or obligations, we&#39;ll explain what is changing in the change log, and the next time you open the app you&#39;ll see a screen asking you to review the updated terms. The updated terms only apply to you once you agree to them. Tapping Continue on that screen means you agree. If you don&#39;t agree, you can delete your account instead, from your profile.</p>
+<p>Minor clarifications or corrections that don&#39;t materially affect your rights can take effect when we publish them, recorded in the change log.</p>
+<p>If you don&#39;t want to accept a material change, you can close your account before it takes effect.</p>
+<h2>18. Governing law</h2>
+<p>These terms are governed by the laws of England and Wales.</p>
+<p>If you are a consumer living elsewhere, this does not deprive you of mandatory protections under the law that applies where you live. Nothing in these terms prevents you bringing a claim in any court that has jurisdiction under applicable law.</p>
+<h2>19. The small print, briefly</h2>
+<ul>
+<li>If part of these terms turns out to be unenforceable, the rest still applies.</li>
+<li>If we don&#39;t enforce a term straight away, we can still enforce it later.</li>
+<li>These terms are the whole agreement between you and us about your use of MyTunnelPal. Our Privacy Policy separately explains how we handle personal data.</li>
+</ul>
+<h2>20. Contact</h2>
+<p>Questions about these terms: <a href="mailto:support@mytunnelpal.com"><strong>support@mytunnelpal.com</strong></a></p>
+<p>80S KIDDO LIMITED, registered in England and Wales, company number 15719938.</p>
+<p>Registered office: 71-75 Shelton Street, Covent Garden, London, England, WC2H 9JQ.</p>
+<p><strong>EU representative and contact points under the Digital Services Act</strong></p>
+<p>Our legal representative in the European Union under the EU Digital Services Act is Data Protection Representative Limited (trading as DataRep), 77 Camden Street Lower, Dublin, D02 XE80, Ireland. You can contact them at <a href="mailto:digitalrequest@datarep.com"><strong>digitalrequest@datarep.com</strong></a>, with &quot;MyTunnelPal&quot; in the subject line.</p>
+<p>Our single point of contact for users, and for EU Member State authorities, the European Commission and the European Board for Digital Services, is <a href="mailto:support@mytunnelpal.com"><strong>support@mytunnelpal.com</strong></a>. We communicate in English.</p>
+<hr>
+<h2>Change log</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>24 November 2026</td>
+<td>First published version.</td>
+</tr>
+</tbody></table></div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="font-family:'Unbounded',sans-serif;font-weight:700;margin-bottom:6px">MyTunnelPal</div>
+      <div>© 2026 80s Kiddo Ltd. All rights reserved.</div>
+    </div>
+    <div class="legal">
+      MyTunnelPal is an independent personal flight log and is not affiliated with, endorsed by, or a substitute for the International Bodyflight Association (IBA) or any tunnel operator's official progression system. Official skill sign-off at participating tunnels remains subject to the relevant operator's own programmes.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
